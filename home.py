@@ -65,7 +65,7 @@ for lattice in latticeSteps:
   mol.set_calculator(calc)
   print(mol.get_potential_energy())
 
-
+# this is not needed
 #dyn = BFGS(mol, trajectory='out_home.traj', logfile='out_home.log')
 #dyn.run(fmax = 0.001)
 #print(mol.get_potential_energy())
