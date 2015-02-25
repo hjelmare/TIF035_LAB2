@@ -13,7 +13,7 @@ from gpaw import PW
 # lagg till mojlighet att bland in annan atomType
 # leta eMin for olika latticeparameter
 
-structure = 1 # 1 for fcc, 2 for bcc
+structure = 2 # 1 for fcc, 2 for bcc, 3 for sc
 atomTypes = ['Al', 'Mg']
 selectType = [1,0,0,0]
 
@@ -34,6 +34,9 @@ for lattice in latticeSteps:
   if structure == 2:
     #bcc
     p = ((0,0,0),(lattice/2, lattice/2, lattice/2),(lattice, 0, 0),(3*lattice/2,lattice/2, lattice/2))
+  if structure == 3
+    #sc
+    p = ((0,0,0), (lattice,0,0), (0, lattice, 0), (0,0,lattice))
   
 
   for i in range(4):
