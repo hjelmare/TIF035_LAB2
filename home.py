@@ -13,7 +13,7 @@ from gpaw import PW
 # lagg till mojlighet att bland in annan atomType
 # leta eMin for olika latticeparameter
 
-structure = 2 # 1 for fcc, 2 for bcc, 3 for sc
+structure = 3 # 1 for fcc, 2 for bcc, 3 for sc
 atomTypes = ['Al', 'Mg']
 selectType = [1,1,1,1]
 
@@ -24,6 +24,8 @@ nLatticeSteps = 10
 
 latticeSteps = np.linspace(minLattice, maxLattice, nLatticeSteps)
 
+print('Structure')
+print(structure)
 print('Atom types')
 print(atomTypes)
 print('Types used')
@@ -45,7 +47,7 @@ for lattice in latticeSteps:
     p = ((0,0,0),(lattice/2, lattice/2, lattice/2),(lattice, 0, 0),(3*lattice/2,lattice/2, lattice/2))
   if structure == 3:
     #sc
-    p = ((0,0,0), (lattice,0,0), (0, lattice, 0), (0,0,lattice))
+    p = ((0,0,0), (lattice,0,0), (2*lattice, 0, 0), (3*lattice,0,0))
   
 
   for i in range(4):
@@ -58,6 +60,9 @@ for lattice in latticeSteps:
   if structure == 2:
     #bcc
     mol.cell = [2*lattice, lattice, lattice]
+  if structure == 3:
+    #sc
+    mol.cell = [4*lattice, lattice, lattice]
   
   mol.pbc = True
 
@@ -68,7 +73,4 @@ for lattice in latticeSteps:
   mol.set_calculator(calc)
   print(mol.get_potential_energy())
 
-# this is not needed
-#dyn = BFGS(mol, trajectory='out_home.traj', logfile='out_home.log')
-#dyn.run(fmax = 0.001)
-#print(mol.get_potential_energy())
+
