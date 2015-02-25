@@ -15,7 +15,7 @@ from gpaw import PW
 
 structure = 2 # 1 for fcc, 2 for bcc, 3 for sc
 atomTypes = ['Al', 'Mg']
-selectType = [1,0,0,0]
+selectType = [1,1,1,1]
 
 cutoff = 300
 minLattice = 3.0
@@ -23,6 +23,15 @@ maxLattice = 5.0
 nLatticeSteps = 10
 
 latticeSteps = np.linspace(minLattice, maxLattice, nLatticeSteps)
+
+print('Atom types')
+print(atomTypes)
+print('Types used')
+print(selectType)
+print('min and max lattice constant, in n steps')
+print([minLattice,maxLattice, nLatticeSteps])
+print('PW cutoff')
+print(cutoff)
 
 
 for lattice in latticeSteps:
