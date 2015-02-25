@@ -43,7 +43,7 @@ for lattice in latticeSteps:
   if structure == 2:
     #bcc
     p = ((0,0,0),(lattice/2, lattice/2, lattice/2),(lattice, 0, 0),(3*lattice/2,lattice/2, lattice/2))
-  if structure == 3
+  if structure == 3:
     #sc
     p = ((0,0,0), (lattice,0,0), (0, lattice, 0), (0,0,lattice))
   
