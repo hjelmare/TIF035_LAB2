@@ -20,7 +20,7 @@ selectType = [1,1,1,1]
 cutoff = 300
 minLattice = 3.0
 maxLattice = 5.0
-nLatticeSteps = 10
+nLatticeSteps = 30
 
 latticeSteps = np.linspace(minLattice, maxLattice, nLatticeSteps)
 
