@@ -8,35 +8,19 @@ from gpaw.eigensolvers import Davidson
 from gpaw import PW
 
 
-# att gora:
-# lagg till sc som structure = 3
-# lagg till mojlighet att bland in annan atomType
-# leta eMin for olika latticeparameter
 
 structure = 1 # 1 for fcc, 2 for bcc, 3 for sc
 atomTypes = ['Al', 'Mg']
-selectType = [1,1,0,0]
+selectType = [0,0,0,0]
 
-cutoff = 300
-minLattice = 3.0
-maxLattice = 5.0
-nLatticeSteps = 30
+lattice = 4
+minCutoff = 100
+maxCutoff = 600
+nCutoffSteps = 11
 
-latticeSteps = np.linspace(minLattice, maxLattice, nLatticeSteps)
+cutoffSteps = np.linspace(minCutoff, maxCutoff, nCutoffSteps)
 
-print('Structure')
-print(structure)
-print('Atom types')
-print(atomTypes)
-print('Types used')
-print(selectType)
-print('min and max lattice constant, in n steps')
-print([minLattice,maxLattice, nLatticeSteps])
-print('PW cutoff')
-print(cutoff)
-
-
-for lattice in latticeSteps:
+for cutoff in cutoffSteps:
   mol = Atoms()
   
   if structure == 1: 
@@ -71,6 +55,7 @@ for lattice in latticeSteps:
   calc = GPAW(mode=PW(cutoff), h = 0.2, xc='PBE', nbands = 24, eigensolver='dav', kpts = (6,6,6), txt='out_home.txt')
 
   mol.set_calculator(calc)
-  print(mol.get_potential_energy())
+  energy = mol.get_potential_energy()
+  print(str(cutoff) + '\t' + str(energy))
 
 
