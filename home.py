@@ -18,9 +18,9 @@ atomTypes = ['Al', 'Mg']
 selectType = [1,1,0,0]
 
 cutoff = 300
-minLattice = 3.0
-maxLattice = 5.0
-nLatticeSteps = 30
+minLattice = 2.0
+maxLattice = 6.0
+nLatticeSteps = 60
 
 latticeSteps = np.linspace(minLattice, maxLattice, nLatticeSteps)
 
@@ -34,7 +34,7 @@ print('min and max lattice constant, in n steps')
 print([minLattice,maxLattice, nLatticeSteps])
 print('PW cutoff')
 print(cutoff)
-
+print('kPts = 8')
 
 for lattice in latticeSteps:
   mol = Atoms()
@@ -68,7 +68,7 @@ for lattice in latticeSteps:
 
 
 
-  calc = GPAW(mode=PW(cutoff), h = 0.2, xc='PBE', nbands = 24, eigensolver='dav', kpts = (6,6,6), txt='out_home.txt')
+  calc = GPAW(mode=PW(cutoff), h = 0.2, xc='PBE', nbands = 24, eigensolver='dav', kpts = (8,8,8), txt='out_home.txt')
 
   mol.set_calculator(calc)
   print(mol.get_potential_energy())
