@@ -17,29 +17,42 @@ structure = 1 # 1 for fcc, 2 for bcc
 atomType = 'Al'
 
 cutoff = 300
-lattice = 4.0
 
-if structure == 1: 
-  #fcc
-  p = ((0,0,0),(lattice/2, lattice/2, 0),(lattice/2, 0, lattice/2),(0,lattice/2, lattice/2))
-if structure == 2:
-  #bcc
-  p = ((0,0,0),(lattice/2, lattice/2, lattice/2),(lattice, 0, 0),(3*lattice/2,lattice/2, lattice/2))
+#Nytt--------------------------------- DETTA STÄMMER INTE, GÖR KLART for-loopen
+#lattice = 4.0
+for lattice in range(1,3,0.2):
+#Nytt---------------------------------
+
+
+  if structure == 1: 
+    #fcc
+    p = ((0,0,0),(lattice/2, lattice/2, 0),(lattice/2, 0, lattice/2),(0,lattice/2, lattice/2))
+  if structure == 2:
+    #bcc
+    p = ((0,0,0),(lattice/2, lattice/2, lattice/2),(lattice, 0, 0),(3*lattice/2,lattice/2, lattice/2))
+
+  if structure == 3:
+    #sc
+    p = ((0,0,0,), (lattice,0,0), (0,lattice,0), (0,0,lattice))
+
+
   
-mol = Atoms()
+  mol = Atoms()
 
-for i in range(4):
-  atom = Atom(atomType, p[i])
-  mol.append(atom)
+  for i in range(4):
+    atom = Atom(atomType, p[i])
+    mol.append(atom)
 
-mol.pbc = True
-mol.cell = [lattice, lattice, lattice]
+  mol.pbc = True
+  mol.cell = [lattice, lattice, lattice]
 
-calc = GPAW(mode=PW(cutoff), h = 0.2, xc='PBE', nbands = 24, eigensolver='dav', kpts = (6,6,6), txt='out_home.txt')
+  calc = GPAW(mode=PW(cutoff), h = 0.2, xc='PBE', nbands = 24, eigensolver='dav', kpts = (6,6,6), txt='out_home.txt')
 
-mol.set_calculator(calc)
+  mol.set_calculator(calc)
 
 
 
-dyn = BFGS(mol, trajectory='out_home.traj', logfile='out_home.log')
-dyn.run(fmax = 0.001)
+  dyn = BFGS(mol, trajectory='out_home.traj', logfile='out_home.log')
+  dyn.run(fmax = 0.001)
+
+  mol.get
