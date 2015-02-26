@@ -19,25 +19,52 @@ data(3,:) = dlmread('data/1mg3al_sc_3to5in30_co300','\t',10,0);
 % data(15,:) = dlmread('data/4mg_sc_3to5in30_co300','\t',10,0);
 
 %% import all sc data
-%the ones from 2 to 6
-temp(1,:) = dlmread('data/4al_sc_2to6in60_co300','\t',11,0); %(0,0,0,0)
-temp(2,:) = dlmread('data/3mg1al_sc_2to6in60_co300','\t',11,0); %(1,1,1,0)
-%temp(3,:) = dlmread('data/mgalmgal_sc_2to6in60_co300','\t',11,0); %(1,0,1,0)
+% The commented first part reads from data file, but we saved the data in
+% variable sc.mat that is imported further down to not have to work with
+% all this text!
 
-%the ones that were run in two sets from 2 to 4
-sc(1,:) = dlmread('data/1mg3al_sc_2to3in15_co300','\t',11,0); %(1,0,0,0)
-a = dlmread('data/1mg3al_sc_3to4in15_co300','\t',11,0); 
-sc(1,:) = [sc(1,:) a];
+% clear all
+% clc
+% %the ones from 2 to 6
+% temp(1,:) = dlmread('data/2to6in60_k8/4al_sc_2to6in60_co300','\t',11,0); %(0,0,0,0)
+% temp(2,:) = dlmread('data/2to6in60_k8/mgalmgal_sc_2to6in60_co300','\t',11,0); %(1,0,1,0)
+% temp(3,:) = dlmread('data/2to6in60_k8/3mg1al_sc_2to6in60_co300','\t',11,0); %(1,1,1,0)
+% 
+% %the ones that were run in two sets from 2 to 4
+% a = dlmread('data/2to3in15_k8/1mg3al_sc_2to3in15_co300','\t',11,0); %(1,0,0,0)
+% b = dlmread('data/3to4in15_k8/1mg3al_sc_3to4in15_co300','\t',11,0); 
+% sc(2,:) = [a; b]';
+% 
+% a = dlmread('data/2to3in15_k8/2al2mg_sc_2to3in15_co300','\t',11,0); %(1,1,0,0)
+% b = dlmread('data/3to4in15_k8/2al2mg_sc_3to4in15_co300','\t',11,0); 
+% sc(3,:) = [a; b]';
+% 
+% a = dlmread('data/2to3in15_k8/4mg_sc_2to3in15_co300','\t',11,0); %(1,1,1,1)
+% b = dlmread('data/3to4in15_k8/4mg_sc_3to4in15_co300','\t',11,0); 
+% sc(6,:) = [a; b]';
+% 
+% %Samlar allt i sc:
+% sc(1,:) = temp(1, 1:30);
+% sc(4:5,:) = temp(2:3, 1:30);
 
-sc(2,:) = dlmread('data/2mg2al_sc_2to3in15_co300','\t',11,0); %(1,1,0,0)
-a = dlmread('data/2mg2al_sc_3to4in15_co300','\t',11,0); 
-sc(2,:) = [sc(2,:) a];
+%x2to6 = linspace(2, 6, 60);
+%plot(x2to6, temp) % plottar de med data för 2 till 6
+clear all
+clc
 
-sc(3,:) = dlmread('data/4mg_sc_2to3in15_co300','\t',11,0); %(1,1,1,1)
-a = dlmread('data/4mg_sc_3to4in15_co300','\t',11,0); 
-sc(3,:) = [sc(3,:) a];
-
-
+load('data/sc.mat')
+x2to4 = linspace(2, 4, 30);
+plot(x2to4, sc)
+title('SC - energy over lattice parameter', 'FontSize', 14)
+xlabel('lattice parameter [Å]', 'FontSize', 14)
+ylabel('Energy [eV]', 'FontSize', 14)
+legend('(Al, Al, Al, Al)', '(Mg, Al, Al, Al)', '(Mg, Mg, Al, Al)', '(Mg, Al, Mg, Al)', '(Mg, Mg, Mg, Al)', '(Mg, Mg, Mg, Mg)')
+%%
+x2to6 = linspace(2, 6, 60);
+x2to4 = linspace(2, 4, 30);
+hold on
+plot(x2to6, temp)
+plot(x2to4, sc)
 
 %%
 
