@@ -28,7 +28,7 @@ data(6,:) = dlmread('data/2to6in60_k8/4mg_bcc_2to6in60_co300_k8','\t',11,0);
 x = linspace(2,6,60);
 plot(x,data)
 
-bcc_full = data;
+bcc_full = data;    
 
 %save('data/bcc.mat','bcc_full')
 
