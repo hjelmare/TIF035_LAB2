@@ -13,23 +13,14 @@ from gpaw import PW
 # lagg till mojlighet att bland in annan atomType
 # leta eMin for olika latticeparameter
 
-structure = 3 # 1 for fcc, 2 for bcc, 3 for sc
+structure = 2 # 1 for fcc, 2 for bcc, 3 for sc
 atomTypes = ['Al', 'Mg']
-<<<<<<< HEAD
 selectType = [0,0,0,0]
 
 cutoff = 300
-minLattice = 3.0
-maxLattice = 5.0
-nLatticeSteps = 15
-=======
-selectType = [1,1,0,0]
-
-cutoff = 300
 minLattice = 2.0
-maxLattice = 6.0
-nLatticeSteps = 60
->>>>>>> 92d4d9178898a78eda0d251c7f50b0679707c942
+maxLattice = 3.0
+nLatticeSteps = 15
 
 latticeSteps = np.linspace(minLattice, maxLattice, nLatticeSteps)
 
