@@ -15,12 +15,12 @@ from gpaw import PW
 
 structure = 2 # 1 for fcc, 2 for bcc, 3 for sc
 atomTypes = ['Al', 'Mg']
-selectType = [1,0,1,0]
+selectType = [0,0,0,0]
 
 cutoff = 300
 minLattice = 2.0
-maxLattice = 6.0
-nLatticeSteps = 60
+maxLattice = 3.0
+nLatticeSteps = 15
 
 latticeSteps = np.linspace(minLattice, maxLattice, nLatticeSteps)
 
