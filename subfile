@@ -2,11 +2,7 @@
 #PBS -q beda
 #PBS -A C3SE2015-1-28
 #PBS -l nodes=1:ppn=8
-<<<<<<< HEAD
-#PBS -l walltime=5:00:00
-=======
 #PBS -l walltime=05:00:00
->>>>>>> 484b3f5a4e6b188a7e4e7e8f286095dfaabae349
 
 cd $PBS_O_WORKDIR
 module purge
