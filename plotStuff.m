@@ -22,3 +22,23 @@ x = linspace(3,5,30);
 plot(x,data)
 
 %save('dataFile.mat','data')
+
+%% K sweep
+
+clear all
+clc
+
+data = dlmread('sweepKData','\t');
+plot(data(:,1),data(:,2))
+
+
+%% cutoff sweep
+
+clear all
+clc
+
+data = dlmread('sweepCutoffData','\t');
+plot(data(:,1),data(:,2))
+
+
+
