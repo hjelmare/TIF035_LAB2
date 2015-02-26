@@ -13,9 +13,9 @@ from gpaw import PW
 # lagg till mojlighet att bland in annan atomType
 # leta eMin for olika latticeparameter
 
-structure = 1 # 1 for fcc, 2 for bcc, 3 for sc
+structure = 2 # 1 for fcc, 2 for bcc, 3 for sc
 atomTypes = ['Al', 'Mg']
-selectType = [1,1,0,0]
+selectType = [1,0,1,0]
 
 cutoff = 300
 minLattice = 2.0
