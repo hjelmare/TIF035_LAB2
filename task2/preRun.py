@@ -10,12 +10,13 @@ from gpaw import PW
 from gpaw import FermiDirac
 
 #silicon = bulk('Si', 'diamond', a=5.459)
-#from gpaw.eigensolvers import Davidson #ska denna vara med?
+from gpaw.eigensolvers import Davidson #ska denna vara med?
 
-# OBS välj en av de olika strukturerna!!!!!!!!
+# OBS valj en av de olika strukturerna!!!!!!!!
 structure = 1 # 1 for fcc, 2 for bcc, 3 for sc
 atomTypes = ['Al', 'Mg']
-selectType = [1,0,0,0]
+selectType = [1,1,1,0]
+lattice = 4.3793
 
 cutoff = 300
 
