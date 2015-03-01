@@ -5,10 +5,10 @@
  |__ |  _|___|_____|  0.9.1.9737
  |___|_|             
 
-User:  albinka@beda17-3.nfs.private
-Date:  Fri Feb 27 10:18:49 2015
+User:  albinka@beda31-4.nfs.private
+Date:  Sun Mar  1 13:14:05 2015
 Arch:  x86_64
-Pid:   32699
+Pid:   11123
 Dir:   /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/lib/python2.6/site-packages/gpaw
 ase:   /beda/sw/apps/ase/r2828/lib/python2.6/site-packages/ase (version 3.6.1.2828)
 numpy: /beda/sw/apps/numpy/py26/1.5.1rc2/mkl10.2/lib/python2.6/site-packages/numpy (version 1.5.1rc2)
@@ -17,39 +17,43 @@ cores: 1
 
 Memory estimate
 ---------------
-Process memory now: 175.91 MiB
-Calculator  400.43 MiB
-    Density  6.76 MiB
+Process memory now: 54.75 MiB
+Calculator  85.51 MiB
+    Density  7.45 MiB
         Arrays  2.74 MiB
-        Localized functions  3.39 MiB
+        Localized functions  4.07 MiB
         Mixer  0.63 MiB
-    Hamiltonian  1.87 MiB
+    Hamiltonian  1.90 MiB
         Arrays  1.79 MiB
         XC  0.00 MiB
         Poisson  0.00 MiB
-        vbar  0.08 MiB
-    Wavefunctions  391.80 MiB
-        Arrays psit_nG  258.99 MiB
-        Eigensolver  0.59 MiB
-        Projectors  121.62 MiB
-        Overlap op  0.48 MiB
-        PW-descriptor  10.13 MiB
+        vbar  0.11 MiB
+    Wavefunctions  76.16 MiB
+        Arrays psit_nG  59.96 MiB
+        Eigensolver  2.24 MiB
+        Projectors  11.17 MiB
+        Overlap op  1.56 MiB
+        PW-descriptor  1.23 MiB
 
 Positions:
   0 Mg    0.0000    0.0000    0.0000
   1 Mg    2.1896    2.1896    0.0000
   2 Mg    2.1896    0.0000    2.1896
-  3 Al    0.0000    2.1896    2.1896
+  3 Mg    0.0000    2.1896    2.1896
+  4 S     2.1896    0.0000    0.0000
+  5 S     4.3793    0.0000    2.1896
+  6 S     2.1896    2.1896    2.1896
+  7 Al    4.3793    2.1896    0.0000
 
     .----------.  
    /|          |  
   / |          |  
  *  |          |  
- |Al|          |  
+ |Mg|   S      |  
  |  .----------.  
- | /  Mg      /   
- |/     Mg   /    
- Mg---------*     
+ S /  Mg      /   
+ |/l    Mg   /    
+ Mg---S-----*     
 
 Unit Cell:
            Periodic     X           Y           Z      Points  Spacing
@@ -88,6 +92,34 @@ LCAO basis set for Mg:
     l=1, rc=2.0938 Bohr: 2p-dz split-valence wave
     l=2, rc=3.1406 Bohr: d-type Gaussian polarization
 
+S-setup:
+  name   : Sulfur
+  id     : ca434db9faa07220b7a1d8cb6886b7a9
+  Z      : 16
+  valence: 6
+  core   : 10
+  charge : 0.0
+  file   : /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/S.PBE.gz
+  cutoffs: 0.76(comp), 1.77(filt), 1.66(core), lmax=2
+  valence states:
+            energy   radius
+    3s(2)  -17.254   0.974
+    3p(4)   -7.008   0.979
+    *s       9.957   0.974
+    *p      20.203   0.979
+    *d       0.000   0.900
+
+LCAO basis set for S:
+  Name: dzp
+  Basis set was loaded from file /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/S.dzp.basis.gz
+  Number of radial functions: 5
+  Number of spherical harmonics: 13
+    l=0, rc=5.5156 Bohr: 3s-sz confined orbital
+    l=1, rc=6.9375 Bohr: 3p-sz confined orbital
+    l=0, rc=3.0469 Bohr: 3s-dz split-valence wave
+    l=1, rc=3.9375 Bohr: 3p-dz split-valence wave
+    l=2, rc=6.9375 Bohr: d-type Gaussian polarization
+
 Al-setup:
   name   : Aluminium
   id     : 0292cae29f5d6237e50f6abdd43a7bdd
@@ -122,19 +154,19 @@ Total Charge:      0.000000
 Fermi Temperature: 0.100000
 Wave functions: Plane wave expansion
       Cutoff energy: 400.000 eV
-      Number of coefficients (min, max): 1506, 1543
+      Number of coefficients (min, max): 1505, 1535
       Using FFTW library
-Eigensolver:       rmm-diis
+Eigensolver:       dav
 XC and Coulomb potentials evaluated on a 48*48*48 grid
 Interpolation: FFT
 Poisson solver: FFT
-Reference Energy:  -22952.366055
+Reference Energy:  -60974.884094
 
 Total number of cores used: 1
 
 Symmetries present: 16
-8000 k-points: 20 x 20 x 20 Monkhorst-Pack grid
-550 k-points in the Irreducible Part of the Brillouin Zone
+512 k-points: 8 x 8 x 8 Monkhorst-Pack grid
+40 k-points in the Irreducible Part of the Brillouin Zone
 Linear Mixing Parameter:           0.1
 Pulay Mixing with 3 Old Densities
 Damping of Long Wave Oscillations: 50
@@ -143,126 +175,110 @@ Convergence Criteria:
 Total Energy Change:           0.0005 eV / electron
 Integral of Absolute Density Change:    0.0001 electrons
 Integral of Absolute Eigenstate Change: 4e-08 eV^2
-Number of Atoms: 4
-Number of Atomic Orbitals: 58
-Number of Bands in Calculation:         20
+Number of Atoms: 8
+Number of Atomic Orbitals: 112
+Number of Bands in Calculation:         64
 Bands to Converge:                      Occupied States Only
-Number of Valence Electrons:            33
+Number of Valence Electrons:            61
                      log10-error:    Total        Iterations:
            Time      WFS    Density  Energy       Fermi  Poisson
-iter:   1  10:21:00  +1.1              -6.512658  2             
-iter:   2  10:21:41  +0.7              -6.868770  2             
-iter:   3  10:22:23  +0.7              -6.937322  2             
-iter:   4  10:23:16  +0.5   -1.4       -6.816109  3             
-iter:   5  10:24:08  +0.5   -1.5       -6.610671  3             
-iter:   6  10:25:01  +0.5   -2.2       -6.463124  3             
-iter:   7  10:25:54  +0.5   -2.2       -6.293787  3             
-iter:   8  10:26:46  +0.6   -2.6       -6.100781  2             
-iter:   9  10:27:39  +0.6   -2.7       -5.883949  2             
-iter:  10  10:28:31  +0.7   -2.6       -5.623468  2             
-iter:  11  10:29:24  +0.7   -2.3       -5.325492  3             
-iter:  12  10:30:16  +0.8   -2.2       -4.987345  3             
-iter:  13  10:31:09  +0.9   -2.2       -4.601175  3             
-iter:  14  10:32:02  +0.9   -2.0       -4.148913  3             
-iter:  15  10:32:54  +1.0   -2.2       -3.643238  3             
-iter:  16  10:33:47  +1.1   -2.1       -3.067588  3             
-iter:  17  10:34:39  +1.2   -2.0       -2.402228  3             
-iter:  18  10:35:32  +1.3   -1.9       -1.624653  3             
-iter:  19  10:36:24  +1.4   -1.9       -0.818073  2             
-iter:  20  10:37:17  +1.4   -1.6        0.320395  3             
-iter:  21  10:38:10  +1.5   -1.9        1.479294  3             
-iter:  22  10:39:02  +1.6   -1.7        2.787193  3             
-iter:  23  10:39:55  +1.7   -1.4        4.595826  5             
-iter:  24  10:40:48  +1.8   -1.8        6.591307  4             
-iter:  25  10:41:40  +2.0   -1.9        8.975124  4             
-iter:  26  10:42:33  +2.1   -1.9       11.797427  4             
-iter:  27  10:43:26  +2.2   -1.8       14.993404  3             
-iter:  28  10:44:19  +2.3   -1.4       19.218824  6             
-iter:  29  10:45:11  +2.3   -1.7       23.912819  5             
-iter:  30  10:46:04  +2.4   -1.7       29.316259  7             
-iter:  31  10:46:57  +2.4   -1.7       34.739560  8             
-iter:  32  10:47:50  +2.3   -1.8       39.785991  10            
-iter:  33  10:48:43  +2.3   -1.9       44.703640  9             
-iter:  34  10:49:36  +2.3   -1.9       49.646508  8             
-iter:  35  10:50:29  +2.3   -1.8       54.599900  9             
-iter:  36  10:51:22  +2.3   -1.7       59.501753  10            
-iter:  37  10:52:15  +2.3   -1.6       64.407419  10            
-iter:  38  10:53:08  +2.3   -1.5       69.265113  10            
-iter:  39  10:54:01  +2.4   -1.4       74.277108  12            
-iter:  40  10:54:54  +2.4   -1.4       79.226348  14            
-iter:  41  10:55:48  +2.4   -1.3       83.614754  12            
-iter:  42  10:56:41  +2.4   -1.2       89.738579  20            
-iter:  43  10:57:34  +2.4   -1.2       95.264304  14            
-iter:  44  10:58:28  +2.4   -1.2      100.857838  15            
-iter:  45  10:59:21  +2.5   -1.2      106.605210  14            
-iter:  46  11:00:15  +2.5   -1.2      112.105778  27            
-iter:  47  11:01:07  +2.5   -1.3      118.758053  6             
-iter:  48  11:02:01  +2.5   -1.9      124.718939  11            
-iter:  49  11:02:54  +2.5   -2.2      130.758557  11            
-iter:  50  11:03:47  +2.6   -2.3      136.894117  12            
-iter:  51  11:04:40  +2.6   -2.2      143.077721  11            
-iter:  52  11:05:33  +2.6   -1.8      149.386407  12            
-iter:  53  11:06:27  +2.6   -1.7      155.827356  13            
-iter:  54  11:07:20  +2.6   -1.8      162.269267  12            
-iter:  55  11:08:13  +2.6   -1.7      168.969513  16            
-iter:  56  11:09:06  +2.6   -2.2      175.564213  13            
-iter:  57  11:10:00  +2.7   -2.1      182.175440  12            
-iter:  58  11:10:53  +2.7   -1.8      188.896744  14            
-iter:  59  11:11:46  +2.7   -1.9      195.577761  13            
-iter:  60  11:12:39  +2.7   -1.7      202.371785  15            
-iter:  61  11:13:33  +2.7   -1.9      209.151223  12            
-iter:  62  11:14:26  +2.7   -1.7      215.958586  13            
-iter:  63  11:15:19  +2.7   -1.7      222.839519  14            
-iter:  64  11:16:12  +2.7   -1.7      229.707086  12            
-iter:  65  11:17:06  +2.7   -1.7      236.614421  13            
-iter:  66  11:17:59  +2.7   -1.4      243.539334  14            
-iter:  67  11:18:52  +2.7   -2.0      250.527662  13            
-iter:  68  11:19:46  +2.7   -2.2      257.552763  13            
-iter:  69  11:20:39  +2.7   -2.2      264.601329  13            
-iter:  70  11:21:32  +2.7   -2.2      271.658871  13            
-iter:  71  11:22:25  +2.7   -1.8      278.718205  13            
-iter:  72  11:23:19  +2.7   -2.0      285.807397  12            
-iter:  73  11:24:12  +2.7   -1.8      292.905721  11            
-iter:  74  11:25:05  +2.7   -2.0      299.930283  10            
-iter:  75  11:25:58  +2.8   -1.6      307.049402  10            
-iter:  76  11:26:51  +2.8   -1.9      314.157891  10            
-iter:  77  11:27:45  +2.8   -1.8      321.369900  9             
-iter:  78  11:28:38  +2.8   -2.0      328.621591  10            
-iter:  79  11:29:31  +2.8   -2.1      335.920670  10            
-iter:  80  11:30:24  +2.8   -2.2      343.284305  10            
-iter:  81  11:31:17  +2.8   -2.1      350.597553  11            
-iter:  82  11:32:10  +2.8   -2.1      357.547153  7             
-iter:  83  11:33:03  +2.8   -1.5      364.593135  8             
-iter:  84  11:33:57  +2.8   -1.5      371.828346  9             
-iter:  85  11:34:49  +2.8   -1.6      376.568762  3             
-iter:  86  11:35:43  +2.8   -1.1      385.906789  15            
-iter:  87  11:36:36  +2.8   -2.0      393.254232  8             
-iter:  88  11:37:29  +2.8   -1.9      400.539192  7             
-iter:  89  11:38:22  +2.8   -1.7      407.732295  6             
-iter:  90  11:39:15  +2.8   -1.6      414.910505  7             
-iter:  91  11:40:08  +2.8   -1.6      421.518609  6             
-iter:  92  11:41:01  +2.8   -1.3      428.808399  7             
-iter:  93  11:41:54  +2.8   -1.5      436.048034  8             
-iter:  94  11:42:47  +2.8   -1.6      443.484974  9             
-iter:  95  11:43:40  +2.8   -1.9      451.185519  8             
-iter:  96  11:44:33  +2.8   -1.8      457.940312  5             
-iter:  97  11:45:26  +2.8   -1.5      464.944630  8             
-iter:  98  11:46:19  +2.8   -1.9      472.027971  7             
-iter:  99  11:47:12  +2.8   -1.8      477.679825  4             
-iter: 100  11:48:05  +2.8   -1.3      484.466651  8             
-iter: 101  11:48:58  +2.9   -1.5      491.014523  8             
-iter: 102  11:49:51  +2.9   -1.7      497.766449  7             
-iter: 103  11:50:45  +2.9   -1.8      504.348754  7             
-iter: 104  11:51:38  +2.9   -1.9      510.756728  7             
-iter: 105  11:52:31  +2.9   -1.9      517.450881  5             
-iter: 106  11:53:24  +2.9   -1.7      523.127674  8             
-iter: 107  11:54:17  +2.9   -2.0      529.202877  7             
-iter: 108  11:55:10  +2.9   -2.2      535.131069  7             
-iter: 109  11:56:03  +2.9   -2.0      541.164833  4             
-iter: 110  11:56:56  +2.9   -1.6      546.223701  7             
-iter: 111  11:57:49  +2.9   -2.3      551.648353  6             
-iter: 112  11:58:42  +2.9   -2.2      556.667867  6             
-iter: 113  11:59:35  +2.9   -1.8      561.278134  6             
-iter: 114  12:00:28  +2.9   -1.8      565.738368  5             
-iter: 115  12:01:21  +2.9   -1.6      570.092831  6             
-iter: 116  12:02:13  +2.9   -1.9      574.594050  5             
+iter:   1  13:14:55  +1.5             -11.232787  3             
+iter:   2  13:15:15  -0.7             -11.316725  2             
+iter:   3  13:15:35  -1.4             -11.331330  2             
+iter:   4  13:15:58  -2.7   -1.4      -11.190119  4             
+iter:   5  13:16:21  -1.9   -1.4      -10.973692  7             
+iter:   6  13:16:45  -3.1   -2.0      -10.958348  3             
+iter:   7  13:17:08  -3.5   -2.1      -10.957916  4             
+iter:   8  13:17:31  -4.8   -2.5      -10.952966  3             
+iter:   9  13:17:54  -5.2   -2.9      -10.953135  3             
+iter:  10  13:18:17  -7.6   -3.3      -10.953096  2             
+iter:  11  13:18:41  -6.2   -3.4      -10.952982  2             
+iter:  12  13:19:04  -8.0   -3.8      -10.952978  2             
+iter:  13  13:19:27  -7.0   -3.9      -10.952972  2             
+iter:  14  13:19:50  -8.6   -4.4      -10.952972  2             
+------------------------------------
+Converged After 14 Iterations.
+
+Energy Contributions Relative to Reference Atoms:(reference = -60974.884094)
+-------------------------
+Kinetic:       +233.194966
+Potential:     -168.733487
+External:        +0.000000
+XC:             -74.976672
+Entropy (-ST):   -0.068231
+Local:           -0.403663
+-------------------------
+Free Energy:    -10.987088
+Zero Kelvin:    -10.952972
+
+Fermi Level: 12.82466
+
+
+Memory usage: 199.71 MB
+
+============================================================
+Timing:                               incl.     excl.
+============================================================
+IO:                                   0.270     0.000   0.0% |
+ Write:                               0.269     0.000   0.0% |
+  Atomic matrices:                    0.001     0.001   0.0% |
+  Band energies:                      0.001     0.001   0.0% |
+  Close:                              0.002     0.002   0.0% |
+  Meta data:                          0.037     0.037   0.0% |
+  Projections:                        0.014     0.014   0.0% |
+  Pseudo-density:                     0.000     0.000   0.0% |
+  Pseudo-potential:                   0.000     0.000   0.0% |
+  Pseudo-wavefunctions:               0.213     0.213   0.1% |
+Initialization:                      29.510     2.831   0.8% |
+ Hamiltonian:                         1.095     0.086   0.0% |
+  Atomic:                             0.853     0.001   0.0% |
+   XC Correction:                     0.852     0.852   0.2% |
+  Communicate energies:               0.000     0.000   0.0% |
+  Initialize Hamiltonian:             0.000     0.000   0.0% |
+  Poisson:                            0.001     0.001   0.0% |
+  XC 3D grid:                         0.154     0.154   0.0% |
+ LCAO initialization:                25.412     1.856   0.5% |
+  LCAO eigensolver:                   3.698     0.005   0.0% |
+   Atomic Hamiltonian:                0.095     0.095   0.0% |
+   Calculate projections:             0.039     0.039   0.0% |
+   Distribute overlap matrix:         0.005     0.005   0.0% |
+   Orbital Layouts:                   0.431     0.431   0.1% |
+   Potential matrix:                  2.007     2.007   0.6% |
+   Sum over cells:                    1.116     1.116   0.3% |
+  LCAO to grid:                      12.378    12.378   3.6% ||
+  Set positions (LCAO WFS):           7.480     0.002   0.0% |
+   Basic WFS set positions:           0.005     0.005   0.0% |
+   Basis functions set positions:     0.000     0.000   0.0% |
+   TCI: Calculate S, T, P:            7.473     7.473   2.2% ||
+ PWDescriptor:                        0.172     0.172   0.0% |
+SCF-cycle:                          315.862     0.248   0.1% |
+ Davidson:                          214.979   214.979  62.2% |------------------------|
+ Density:                            27.097     0.000   0.0% |
+  Atomic density matrices:            0.219     0.219   0.1% |
+  Mix:                                0.945     0.945   0.3% |
+  Multipole moments:                  0.002     0.002   0.0% |
+  Pseudo density:                    25.930    25.703   7.4% |--|
+   Symmetrize density:                0.228     0.228   0.1% |
+ Hamiltonian:                        11.901     0.900   0.3% |
+  Atomic:                             9.352     0.010   0.0% |
+   XC Correction:                     9.342     9.342   2.7% ||
+  Communicate energies:               0.000     0.000   0.0% |
+  Poisson:                            0.010     0.010   0.0% |
+  XC 3D grid:                         1.639     1.639   0.5% |
+ Orthonormalize:                     17.373     0.032   0.0% |
+  Band Layouts:                       0.135     0.005   0.0% |
+   Inverse Cholesky:                  0.130     0.130   0.0% |
+  calc_s_matrix:                      3.431     3.431   1.0% |
+  projections:                        9.553     9.553   2.8% ||
+  rotate_psi:                         4.223     4.223   1.2% |
+ Subspace diag:                      44.265     0.050   0.0% |
+  Band Layouts:                       1.039     0.010   0.0% |
+   Diagonalize:                       1.018     1.018   0.3% |
+   Distribute results:                0.011     0.011   0.0% |
+  calc_h_matrix:                     35.540    35.540  10.3% |---|
+  rotate_psi:                         7.636     7.636   2.2% ||
+Other:                                0.018     0.018   0.0% |
+============================================================
+Total:                                        345.660 100.0%
+============================================================
+date: Sun Mar  1 13:19:51 2015
