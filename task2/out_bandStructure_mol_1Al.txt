@@ -1,0 +1,427 @@
+
+  ___ ___ ___ _ _ _  
+ |   |   |_  | | | | 
+ | | | | | . | | | | 
+ |__ |  _|___|_____|  0.9.1.9737
+ |___|_|             
+
+User:  albinka@beda52-2.nfs.private
+Date:  Sun Mar  1 16:11:05 2015
+Arch:  x86_64
+Pid:   20623
+Dir:   /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/lib/python2.6/site-packages/gpaw
+ase:   /beda/sw/apps/ase/r2828/lib/python2.6/site-packages/ase (version 3.6.1.2828)
+numpy: /beda/sw/apps/numpy/py26/1.5.1rc2/mkl10.2/lib/python2.6/site-packages/numpy (version 1.5.1rc2)
+units: Angstrom and eV
+cores: 1
+
+Memory estimate
+---------------
+Process memory now: 195.87 MiB
+Calculator  932.48 MiB
+    Density  7.45 MiB
+        Arrays  2.74 MiB
+        Localized functions  4.07 MiB
+        Mixer  0.63 MiB
+    Hamiltonian  1.90 MiB
+        Arrays  1.79 MiB
+        XC  0.00 MiB
+        Poisson  0.00 MiB
+        vbar  0.11 MiB
+    Wavefunctions  923.13 MiB
+        Arrays psit_nG  767.50 MiB
+        Eigensolver  1.62 MiB
+        Projectors  142.98 MiB
+        Overlap op  1.56 MiB
+        PW-descriptor  9.46 MiB
+    .----------.  
+   /|          |  
+  / |          |  
+ *  |          |  
+ |Mg|   S      |  
+ |  .----------.  
+ S /  Mg      /   
+ |/l    Mg   /    
+ Mg---S-----*     
+
+Unit Cell:
+           Periodic     X           Y           Z      Points  Spacing
+  --------------------------------------------------------------------
+  1. axis:    yes    4.379300    0.000000    0.000000    24     0.1825
+  2. axis:    yes    0.000000    4.379300    0.000000    24     0.1825
+  3. axis:    yes    0.000000    0.000000    4.379300    24     0.1825
+
+Mg-setup:
+  name   : Magnesium
+  id     : b56b6cab5149d5bf22ad04c2f71a3023
+  Z      : 12
+  valence: 10
+  core   : 2
+  charge : 0.0
+  file   : /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/Mg.PBE.gz
+  cutoffs: 1.03(comp), 1.86(filt), 0.54(core), lmax=2
+  valence states:
+            energy   radius
+    2s(2)  -79.840   1.090
+    3s(2)   -4.705   1.090
+    2p(6)  -46.613   1.085
+    3p(0)   -1.330   1.085
+    *d       0.000   1.037
+
+LCAO basis set for Mg:
+  Name: dzp
+  Basis set was loaded from file /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/Mg.dzp.basis.gz
+  Number of radial functions: 7
+  Number of spherical harmonics: 15
+    l=0, rc=2.7969 Bohr: 2s-sz confined orbital
+    l=0, rc=9.2344 Bohr: 3s-sz confined orbital
+    l=1, rc=3.1406 Bohr: 2p-sz confined orbital
+    l=0, rc=1.8125 Bohr: 2s-dz split-valence wave
+    l=0, rc=5.5156 Bohr: 3s-dz split-valence wave
+    l=1, rc=2.0938 Bohr: 2p-dz split-valence wave
+    l=2, rc=3.1406 Bohr: d-type Gaussian polarization
+
+S-setup:
+  name   : Sulfur
+  id     : ca434db9faa07220b7a1d8cb6886b7a9
+  Z      : 16
+  valence: 6
+  core   : 10
+  charge : 0.0
+  file   : /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/S.PBE.gz
+  cutoffs: 0.76(comp), 1.77(filt), 1.66(core), lmax=2
+  valence states:
+            energy   radius
+    3s(2)  -17.254   0.974
+    3p(4)   -7.008   0.979
+    *s       9.957   0.974
+    *p      20.203   0.979
+    *d       0.000   0.900
+
+LCAO basis set for S:
+  Name: dzp
+  Basis set was loaded from file /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/S.dzp.basis.gz
+  Number of radial functions: 5
+  Number of spherical harmonics: 13
+    l=0, rc=5.5156 Bohr: 3s-sz confined orbital
+    l=1, rc=6.9375 Bohr: 3p-sz confined orbital
+    l=0, rc=3.0469 Bohr: 3s-dz split-valence wave
+    l=1, rc=3.9375 Bohr: 3p-dz split-valence wave
+    l=2, rc=6.9375 Bohr: d-type Gaussian polarization
+
+Al-setup:
+  name   : Aluminium
+  id     : 0292cae29f5d6237e50f6abdd43a7bdd
+  Z      : 13
+  valence: 3
+  core   : 10
+  charge : 0.0
+  file   : /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/Al.PBE.gz
+  cutoffs: 1.08(comp), 1.91(filt), 2.36(core), lmax=2
+  valence states:
+            energy   radius
+    3s(2)   -7.753   1.085
+    3p(1)   -2.712   1.085
+    *s      19.459   1.085
+    *p      24.500   1.085
+    *d       0.000   1.085
+
+LCAO basis set for Al:
+  Name: dzp
+  Basis set was loaded from file /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/Al.dzp.basis.gz
+  Number of radial functions: 5
+  Number of spherical harmonics: 13
+    l=0, rc=7.8750 Bohr: 3s-sz confined orbital
+    l=1, rc=10.4219 Bohr: 3p-sz confined orbital
+    l=0, rc=4.6094 Bohr: 3s-dz split-valence wave
+    l=1, rc=6.2812 Bohr: 3p-dz split-valence wave
+    l=2, rc=10.4219 Bohr: d-type Gaussian polarization
+
+Using the PBE Exchange-Correlation Functional.
+Spin-Paired Calculation
+Total Charge:      0.000000
+Fermi Temperature: 0.100000
+Wave functions: Plane wave expansion
+      Cutoff energy: 400.000 eV
+      Number of coefficients (min, max): 1505, 1535
+      Using FFTW library
+Eigensolver:       cg
+XC and Coulomb potentials evaluated on a 48*48*48 grid
+Interpolation: FFT
+Poisson solver: FFT
+Reference Energy:  -60974.884094
+
+Total number of cores used: 1
+
+Symmetries present: 1
+512 k-points: 8 x 8 x 8 Monkhorst-Pack grid
+512 k-points in the Irreducible Part of the Brillouin Zone
+Linear Mixing Parameter:           0.1
+Pulay Mixing with 3 Old Densities
+Damping of Long Wave Oscillations: 50
+
+Convergence Criteria:
+Total Energy Change:           0.0005 eV / electron
+Integral of Absolute Density Change:    0.0001 electrons
+Integral of Absolute Eigenstate Change: 4e-08 eV^2
+Number of Atoms: 8
+Number of Atomic Orbitals: 112
+Number of Bands in Calculation:         64
+Bands to Converge:                      8 Lowest Bands
+Number of Valence Electrons:            61
+
+Memory estimate
+---------------
+Process memory now: 195.90 MiB
+Calculator  104.53 MiB
+    Density  7.45 MiB
+        Arrays  2.74 MiB
+        Localized functions  4.07 MiB
+        Mixer  0.63 MiB
+    Hamiltonian  1.90 MiB
+        Arrays  1.79 MiB
+        XC  0.00 MiB
+        Poisson  0.00 MiB
+        vbar  0.11 MiB
+    Wavefunctions  95.18 MiB
+        Arrays psit_nG  76.56 MiB
+        Eigensolver  1.65 MiB
+        Projectors  13.97 MiB
+        Overlap op  1.59 MiB
+        PW-descriptor  1.40 MiB
+
+Positions:
+  0 Mg    0.0000    0.0000    0.0000
+  1 Mg    2.1896    2.1896    0.0000
+  2 Mg    2.1896    0.0000    2.1896
+  3 Mg    0.0000    2.1896    2.1896
+  4 S     2.1896    0.0000    0.0000
+  5 S     4.3793    0.0000    2.1896
+  6 S     2.1896    2.1896    2.1896
+  7 Al    4.3793    2.1896    0.0000
+
+    .----------.  
+   /|          |  
+  / |          |  
+ *  |          |  
+ |Mg|   S      |  
+ |  .----------.  
+ S /  Mg      /   
+ |/l    Mg   /    
+ Mg---S-----*     
+
+Unit Cell:
+           Periodic     X           Y           Z      Points  Spacing
+  --------------------------------------------------------------------
+  1. axis:    yes    4.379300    0.000000    0.000000    24     0.1825
+  2. axis:    yes    0.000000    4.379300    0.000000    24     0.1825
+  3. axis:    yes    0.000000    0.000000    4.379300    24     0.1825
+
+Mg-setup:
+  name   : Magnesium
+  id     : b56b6cab5149d5bf22ad04c2f71a3023
+  Z      : 12
+  valence: 10
+  core   : 2
+  charge : 0.0
+  file   : /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/Mg.PBE.gz
+  cutoffs: 1.03(comp), 1.86(filt), 0.54(core), lmax=2
+  valence states:
+            energy   radius
+    2s(2)  -79.840   1.090
+    3s(2)   -4.705   1.090
+    2p(6)  -46.613   1.085
+    3p(0)   -1.330   1.085
+    *d       0.000   1.037
+
+LCAO basis set for Mg:
+  Name: dzp
+  Basis set was loaded from file /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/Mg.dzp.basis.gz
+  Number of radial functions: 7
+  Number of spherical harmonics: 15
+    l=0, rc=2.7969 Bohr: 2s-sz confined orbital
+    l=0, rc=9.2344 Bohr: 3s-sz confined orbital
+    l=1, rc=3.1406 Bohr: 2p-sz confined orbital
+    l=0, rc=1.8125 Bohr: 2s-dz split-valence wave
+    l=0, rc=5.5156 Bohr: 3s-dz split-valence wave
+    l=1, rc=2.0938 Bohr: 2p-dz split-valence wave
+    l=2, rc=3.1406 Bohr: d-type Gaussian polarization
+
+S-setup:
+  name   : Sulfur
+  id     : ca434db9faa07220b7a1d8cb6886b7a9
+  Z      : 16
+  valence: 6
+  core   : 10
+  charge : 0.0
+  file   : /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/S.PBE.gz
+  cutoffs: 0.76(comp), 1.77(filt), 1.66(core), lmax=2
+  valence states:
+            energy   radius
+    3s(2)  -17.254   0.974
+    3p(4)   -7.008   0.979
+    *s       9.957   0.974
+    *p      20.203   0.979
+    *d       0.000   0.900
+
+LCAO basis set for S:
+  Name: dzp
+  Basis set was loaded from file /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/S.dzp.basis.gz
+  Number of radial functions: 5
+  Number of spherical harmonics: 13
+    l=0, rc=5.5156 Bohr: 3s-sz confined orbital
+    l=1, rc=6.9375 Bohr: 3p-sz confined orbital
+    l=0, rc=3.0469 Bohr: 3s-dz split-valence wave
+    l=1, rc=3.9375 Bohr: 3p-dz split-valence wave
+    l=2, rc=6.9375 Bohr: d-type Gaussian polarization
+
+Al-setup:
+  name   : Aluminium
+  id     : 0292cae29f5d6237e50f6abdd43a7bdd
+  Z      : 13
+  valence: 3
+  core   : 10
+  charge : 0.0
+  file   : /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/Al.PBE.gz
+  cutoffs: 1.08(comp), 1.91(filt), 2.36(core), lmax=2
+  valence states:
+            energy   radius
+    3s(2)   -7.753   1.085
+    3p(1)   -2.712   1.085
+    *s      19.459   1.085
+    *p      24.500   1.085
+    *d       0.000   1.085
+
+LCAO basis set for Al:
+  Name: dzp
+  Basis set was loaded from file /beda/sw/apps/GPAW/r9737-py26-i111-mkl102/gpaw-setups-0.9.9672/Al.dzp.basis.gz
+  Number of radial functions: 5
+  Number of spherical harmonics: 13
+    l=0, rc=7.8750 Bohr: 3s-sz confined orbital
+    l=1, rc=10.4219 Bohr: 3p-sz confined orbital
+    l=0, rc=4.6094 Bohr: 3s-dz split-valence wave
+    l=1, rc=6.2812 Bohr: 3p-dz split-valence wave
+    l=2, rc=10.4219 Bohr: d-type Gaussian polarization
+
+Using the PBE Exchange-Correlation Functional.
+Spin-Paired Calculation
+Total Charge:      0.000000
+Fermi Temperature: 0.100000
+Wave functions: Plane wave expansion
+      Cutoff energy: 400.000 eV
+      Number of coefficients (min, max): 1504, 1568
+      Using FFTW library
+Eigensolver:       cg
+XC and Coulomb potentials evaluated on a 48*48*48 grid
+Interpolation: FFT
+Poisson solver: FFT
+Reference Energy:  -60974.884094
+
+Total number of cores used: 1
+
+Symmetries present: 1
+50 k-points
+50 k-points in the Irreducible Part of the Brillouin Zone
+Linear Mixing Parameter:           0.1
+Pulay Mixing with 3 Old Densities
+Damping of Long Wave Oscillations: 50
+
+Convergence Criteria:
+Total Energy Change:           0.0005 eV / electron
+Integral of Absolute Density Change:    0.0001 electrons
+Integral of Absolute Eigenstate Change: 4e-08 eV^2
+Number of Atoms: 8
+Number of Atomic Orbitals: 112
+Number of Bands in Calculation:         64
+Bands to Converge:                      8 Lowest Bands
+Number of Valence Electrons:            61
+                     log10-error:    Total        Iterations:
+           Time      WFS    Density  Energy       Fermi  Poisson
+iter:   1  16:13:25  -0.0              -8.676761  9             
+iter:   2  16:15:06  -0.8              -9.336288  5             
+iter:   3  16:16:47  -1.6              -9.371091  2             
+iter:   4  16:18:29  -2.1              -9.375901  2             
+iter:   5  16:20:13  -2.9              -9.376920  2             
+iter:   6  16:21:57  -3.2              -9.377186  1             
+iter:   7  16:23:41  -3.8              -9.377264  1             
+iter:   8  16:25:25  -4.0              -9.377296  1             
+iter:   9  16:27:08  -4.7              -9.377306  1             
+iter:  10  16:28:51  -4.7              -9.377311  1             
+iter:  11  16:30:32  -5.7              -9.377313  1             
+iter:  12  16:32:11  -6.0              -9.377314  1             
+iter:  13  16:33:47  -6.7              -9.377314  1             
+iter:  14  16:35:17  -7.0              -9.377314  1             
+iter:  15  16:36:39  -7.6              -9.377314  0             
+------------------------------------
+Converged After 15 Iterations.
+
+Energy Contributions Relative to Reference Atoms:(reference = -60974.884094)
+-------------------------
+Kinetic:       +234.776314
+Potential:     -168.733488
+External:        +0.000000
+XC:             -74.976673
+Entropy (-ST):   -0.079610
+Local:           -0.403663
+-------------------------
+Free Energy:     -9.417119
+Zero Kelvin:     -9.377314
+
+Fermi Level: 13.25381
+
+
+Memory usage: 231.13 MB
+
+============================================================
+Timing:                               incl.     excl.
+============================================================
+Initialization:                      32.899     1.839   0.1% |
+ Hamiltonian:                         1.061     0.082   0.0% |
+  Atomic:                             0.835     0.001   0.0% |
+   XC Correction:                     0.834     0.834   0.1% |
+  Communicate energies:               0.000     0.000   0.0% |
+  Initialize Hamiltonian:             0.000     0.000   0.0% |
+  Poisson:                            0.001     0.001   0.0% |
+  XC 3D grid:                         0.143     0.143   0.0% |
+ LCAO initialization:                29.787     1.861   0.1% |
+  LCAO eigensolver:                   4.132     0.007   0.0% |
+   Atomic Hamiltonian:                0.120     0.120   0.0% |
+   Calculate projections:             0.047     0.047   0.0% |
+   Distribute overlap matrix:         0.006     0.006   0.0% |
+   Orbital Layouts:                   0.528     0.528   0.0% |
+   Potential matrix:                  2.005     2.005   0.1% |
+   Sum over cells:                    1.420     1.420   0.1% |
+  LCAO to grid:                      15.563    15.563   1.0% |
+  Set positions (LCAO WFS):           8.231     0.001   0.0% |
+   Basic WFS set positions:           0.001     0.001   0.0% |
+   Basis functions set positions:     0.000     0.000   0.0% |
+   TCI: Calculate S, T, P:            8.229     8.229   0.5% |
+ PWDescriptor:                        0.212     0.212   0.0% |
+ Redistribute:                        0.000     0.000   0.0% |
+PWDescriptor:                         2.149     2.149   0.1% |
+Read:                                 0.003     0.000   0.0% |
+ Density:                             0.001     0.001   0.0% |
+ Hamiltonian:                         0.002     0.002   0.0% |
+SCF-cycle:                         1486.780     0.446   0.0% |
+ CG:                               1391.450  1322.909  86.2% |---------------------------------|
+  CG: orthonormalize:                68.541    32.565   2.1% ||
+   CG: overlap:                      23.518    23.518   1.5% ||
+   CG: overlap2:                     12.458    12.458   0.8% |
+ Orthonormalize:                     23.089     0.041   0.0% |
+  Band Layouts:                       0.185     0.007   0.0% |
+   Inverse Cholesky:                  0.178     0.178   0.0% |
+  calc_s_matrix:                      4.577     4.577   0.3% |
+  projections:                       12.642    12.642   0.8% |
+  rotate_psi:                         5.643     5.643   0.4% |
+ Residuals:                          12.699    12.699   0.8% |
+ Subspace diag:                      59.096     0.066   0.0% |
+  Band Layouts:                       1.372     0.014   0.0% |
+   Diagonalize:                       1.341     1.341   0.1% |
+   Distribute results:                0.016     0.016   0.0% |
+  calc_h_matrix:                     47.449    47.449   3.1% ||
+  rotate_psi:                        10.209    10.209   0.7% |
+Other:                               12.020    12.020   0.8% |
+============================================================
+Total:                                       1533.851 100.0%
+============================================================
+date: Sun Mar  1 16:36:39 2015
