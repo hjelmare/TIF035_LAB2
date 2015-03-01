@@ -53,7 +53,9 @@ x = [0 0.25, 0.5 0.75 1];
 Eref(1,:) = x.*MgEnergy + (1-x).*AlEnergy - fccMin';    %fcc
 Eref(2,:) = x.*MgEnergy + (1-x).*AlEnergy - bccMin';    %bcc
 Eref(3,:) = x.*MgEnergy + (1-x).*AlEnergy - scMin';    %sc
-plot(x,-Eref)
+plot(x,-Eref, '*--')
+xlabel('portion of Mg', 'FontSize', 14)
+ylabel('energy [eV]', 'FontSize', 14)
 legend('fcc', 'bcc', 'sc')
 
 
